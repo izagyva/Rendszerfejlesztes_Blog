@@ -1,0 +1,3 @@
+pymongo==4.6.3
+
+# nodejs-t is fel kell rakni

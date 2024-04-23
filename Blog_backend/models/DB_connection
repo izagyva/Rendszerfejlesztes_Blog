@@ -1,0 +1,22 @@
+from pymongo import MongoClient, errors
+import sys
+
+def create_connection():
+    connection_string = "mongodb+srv://admin:admin123@cluster0.vwobijk.mongodb.net/"
+
+    try:
+        # Create a new client instance
+        client = MongoClient(connection_string)
+
+        # Check if the server instance is available
+        client.server_info()
+
+        print("MongoDB connection successful")
+        return client
+
+    except errors.ServerSelectionTimeoutError as err:
+        # If a connection cannot be made, print the error and exit
+        print("pymongo ERROR:", err)
+        sys.exit()
+
+client = create_connection()
