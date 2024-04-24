@@ -1,1 +1,2 @@
 # Rendszerfejlesztes_Blog
+# x
